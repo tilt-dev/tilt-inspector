@@ -2,9 +2,39 @@
   "name": "tilt-inspector",
   "version": "0.1.0",
   "description": "A small debugging server to help inspect Tilt state",
-  "main": "index.js",
   "repository": "https://github.com/tilt-dev/tilt-inspector",
   "author": "Nick Santos <nick@tilt.dev>",
   "license": "Apache-2.0",
-  "private": false
+  "private": false,
+  "files": [
+    "dist/*.ts",
+    "dist/*.js",
+    "dist/gen/*.ts",
+    "dist/gen/*.js",
+    "dist/gen/**/*.ts",
+    "dist/gen/**/*.js",
+    "README.md"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@kubernetes/client-node": "^0.14.3",
+    "prettier": "^2.2.1",
+    "typedoc": "^0.20.35"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  },
+  "scripts": {
+    "format": "prettier --loglevel error --write \"./src/**/*.ts\"",
+    "lint": "tslint --project \".\" && prettier --check \"./src/**/*.ts\" && tslint --project \"./examples/typescript\"",
+    "clean": "rm -Rf node_modules/ dist/",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepare": "npm run build",
+    "prepack": "npm run build",
+    "docs": "typedoc src/gen/api",
+    "start": "npm run build && node dist/index.js",
+    "genapi": "./genapi.sh"
+  }
 }
