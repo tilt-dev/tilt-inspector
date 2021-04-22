@@ -1,0 +1,10 @@
+{
+  "name": "tilt-inspector",
+  "version": "0.1.0",
+  "description": "A small debugging server to help inspect Tilt state",
+  "main": "index.js",
+  "repository": "https://github.com/tilt-dev/tilt-inspector",
+  "author": "Nick Santos <nick@tilt.dev>",
+  "license": "Apache-2.0",
+  "private": false
+}
