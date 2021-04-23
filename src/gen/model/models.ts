@@ -49,7 +49,7 @@ export * from './v1alpha1TargetStateTerminated';
 export * from './v1alpha1TargetStateWaiting';
 export * from './versionInfo';
 
-import localVarRequest = require('request');
+import localVarRequest from 'request';
 
 import { V1APIGroup } from './v1APIGroup';
 import { V1APIGroupList } from './v1APIGroupList';
