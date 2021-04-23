@@ -1,5 +1,5 @@
 const k8s = require("@kubernetes/client-node");
-const TiltApi = require("./gen/api").TiltDevV1alpha1Api;
+const TiltApi = require("../gen/api").TiltDevV1alpha1Api;
 const homedir = require("os").homedir();
 const path = require("path");
 
