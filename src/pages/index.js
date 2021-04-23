@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          Inspect the current state of a running&nbsp;
+          Inspect the current state of any running&nbsp;
           <img src="/wordmark.svg" alt="Tilt" className="logo" />
           &nbsp;instance.
         </p>
@@ -58,12 +58,6 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
-
-      <style jsx>{`
-      `}</style>
-
-      <style jsx global>{`
-      `}</style>
     </div>
   )
 }
