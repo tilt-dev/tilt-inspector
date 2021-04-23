@@ -1,6 +1,20 @@
 import Footer from "../components/Footer";
+import {
+  newTiltConfig,
+  getFooterProps,
+  setContextFromCookies,
+} from "../lib/client";
+import cookie from "cookie";
 
-export default function Home() {
+export async function getServerSideProps(context) {
+  let config = newTiltConfig();
+  setContextFromCookies(config, context);
+  return {
+    props: { ...getFooterProps(config) },
+  };
+}
+
+export default function Home(props) {
   return (
     <div className="container">
       <main>
@@ -41,7 +55,7 @@ export default function Home() {
         </div>
       </main>
 
-      <Footer />
+      <Footer currentContext={props.currentContext} contexts={props.contexts} />
     </div>
   );
 }
