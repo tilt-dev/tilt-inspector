@@ -3,7 +3,7 @@ const TiltApi = require("../gen/api").TiltDevV1alpha1Api;
 const homedir = require("os").homedir();
 const path = require("path");
 
-export let newTiltClient = (): number => {
+export let newTiltClient = (): TiltApi => {
   const kc = new k8s.KubeConfig();
   let loaded = false;
   try {
