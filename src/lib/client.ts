@@ -51,7 +51,7 @@ export function setContextFromCookies(config, context) {
 }
 
 // Fetch the props for the footer.
-export function getFooterProps(config) {
+export function getHeaderProps(config) {
   return {
     currentContext: config.getCurrentContext(),
     contexts: config.getContexts().map((c) => c.name),

@@ -1,6 +1,6 @@
 import Cookie from 'universal-cookie'
 
-type FooterProps = {
+type HeaderProps = {
   contexts: string[],
   currentContext: string
 }
@@ -11,7 +11,7 @@ function setTiltContextCookie(val: string) {
   window.location.reload()
 }
 
-export default function Footer(props: FooterProps) {
+export default function Header(props: HeaderProps) {
   let {contexts, currentContext} = props
   contexts = contexts || []
   let otherContextButtons = contexts.filter((c) => c != currentContext).map((c) => {
