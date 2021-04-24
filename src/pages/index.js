@@ -1,7 +1,7 @@
-import Footer from "../components/Footer";
+import Header from "../components/Header";
 import {
   newTiltConfig,
-  getFooterProps,
+  getHeaderProps,
   setContextFromCookies,
 } from "../lib/client";
 import cookie from "cookie";
@@ -10,7 +10,7 @@ export async function getServerSideProps(context) {
   let config = newTiltConfig();
   setContextFromCookies(config, context);
   return {
-    props: { ...getFooterProps(config) },
+    props: { ...getHeaderProps(config) },
   };
 }
 
@@ -48,14 +48,14 @@ export default function Home(props) {
             <p>Resources and a summary of their statuses</p>
           </a>
 
-          <a href="/view/podlogstreams" className="card">
+          <a href="/view/podlogstream" className="card">
             <h3>Pod Log Streams &rarr;</h3>
             <p>Pod logs available for reading</p>
           </a>
         </div>
       </main>
 
-      <Footer currentContext={props.currentContext} contexts={props.contexts} />
+      <Header currentContext={props.currentContext} contexts={props.contexts} />
     </div>
   );
 }
