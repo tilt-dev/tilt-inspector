@@ -1,5 +1,5 @@
 {
-  "name": "tilt-inspector",
+  "name": "@tilt.dev/tilt-inspector",
   "version": "0.1.0",
   "description": "A small debugging server to help inspect Tilt state",
   "repository": "https://github.com/tilt-dev/tilt-inspector",
