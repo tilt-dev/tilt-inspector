@@ -83,6 +83,7 @@ export default function List(props) {
   return (
     <div className="container">
       <Header currentContext={props.currentContext} contexts={props.contexts} />
+
       <main>
         <h1>{kind} List</h1>
         <Table style={{maxWidth: '1000px', width: '75vw'}}>
