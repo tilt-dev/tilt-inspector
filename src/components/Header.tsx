@@ -35,13 +35,13 @@ export default function Header(props: HeaderProps) {
   }
   
   return (
-    <footer>
+    <nav>
       <div className="cell">
       <a href="/">🕵 <img src="/wordmark.svg" alt="Home" className="logo" />&nbsp; 🕵</a>
       </div>
       <div className="cell">
       {children}
       </div>
-    </footer>
+    </nav>
   );
 }

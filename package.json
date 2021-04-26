@@ -1,11 +1,17 @@
 {
   "name": "@tilt.dev/tilt-inspector",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "A small debugging server to help inspect Tilt state",
   "repository": "https://github.com/tilt-dev/tilt-inspector",
   "author": "Nick Santos <nick@tilt.dev>",
   "license": "Apache-2.0",
   "private": false,
+  "files": [
+    ".next",
+    "public",
+    "index.js",
+    "start.js"
+  ],
   "dependencies": {
     "@kubernetes/client-node": "^0.14.3",
     "@material-ui/core": "^4.11.3",
@@ -22,7 +28,11 @@
     "typedoc": "^0.20.35",
     "typescript": "^4.2.4"
   },
+  "bin": {
+    "tilt-inspector": "./start.js"
+  },
   "scripts": {
+    "prepublish": "next build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

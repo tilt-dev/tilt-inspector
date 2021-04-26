@@ -2,6 +2,3 @@
 
 genapi:
 	./genapi.sh
-
-publish-image:
-	./publish-image.sh

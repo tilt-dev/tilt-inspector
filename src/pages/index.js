@@ -17,7 +17,10 @@ export async function getServerSideProps(context) {
 export default function Home(props) {
   return (
     <div className="container">
+      <Header currentContext={props.currentContext} contexts={props.contexts} />
+
       <main>
+
         <h1 className="title">
           🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️
           <br />
@@ -54,8 +57,6 @@ export default function Home(props) {
           </a>
         </div>
       </main>
-
-      <Header currentContext={props.currentContext} contexts={props.contexts} />
     </div>
   );
 }
