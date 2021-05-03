@@ -20,7 +20,6 @@ export default function Home(props) {
       <Header currentContext={props.currentContext} contexts={props.contexts} />
 
       <main>
-
         <h1 className="title">
           🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️🕵️
           <br />
