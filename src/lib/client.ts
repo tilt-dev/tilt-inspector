@@ -21,7 +21,9 @@ export let newTiltConfig = () => {
   }
 
   if (!loaded) {
-    throw new Error("Could not connect to running Tilt instance");
+    throw new Error(
+      "Could not connect to running Tilt instance: no config loaded"
+    );
   }
   return kc;
 };
@@ -34,7 +36,9 @@ export let newTiltClient = () => {
 // Create a tilt client from the given context.
 export let newTiltClientFromConfig = (kc) => {
   if (!kc.getCurrentCluster()) {
-    throw new Error("Could not connect to running Tilt instance");
+    throw new Error(
+      "Could not connect to running Tilt instance: no current cluster"
+    );
   }
   return kc.makeApiClient(TiltApi);
 };
@@ -48,6 +52,18 @@ export function setContextFromCookies(config, context) {
       config.setCurrentContext(c.name);
     }
   });
+
+  if (!config.getCurrentContext()) {
+    let bestContext = "";
+    config.getContexts().forEach((c) => {
+      if (c.name == "tilt-default") {
+        bestContext = c.name;
+      } else if (!bestContext) {
+        bestContext = c.name;
+      }
+    });
+    config.setCurrentContext(bestContext);
+  }
 }
 
 // Fetch the props for the footer.

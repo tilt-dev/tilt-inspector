@@ -37,7 +37,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --loglevel error --write \"./src/**/*.ts\" \"./src/**/*.js\"",
-    "lint": "tslint --project \".\" && prettier --check \"./src/**/*.ts\" && tslint --project \"./examples/typescript\"",
+    "lint": "prettier --check \"./src/**/*.ts\"",
     "docs": "typedoc src/gen/api",
     "genapi": "./genapi.sh"
   }

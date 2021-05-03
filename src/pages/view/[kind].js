@@ -77,7 +77,7 @@ export default function List(props) {
   const { kind } = useRouter().query;
   let { data } = props;
   let children = data.items.map((item) => {
-    return <Row key={item.metadata.name} item={item} />
+    return <Row key={item.metadata.name} item={item} />;
   });
 
   return (
@@ -86,15 +86,14 @@ export default function List(props) {
 
       <main>
         <h1>{kind} List</h1>
-        <Table style={{maxWidth: '1000px', width: '75vw'}}>
-
-                <TableHead>
-                  <TableRow>
-                    <TableCell></TableCell>
-                    <TableCell>Name</TableCell>
-                    <TableCell align="right">Creation Timestamp</TableCell>
-                  </TableRow>
-</TableHead>
+        <Table style={{ maxWidth: "1000px", width: "75vw" }}>
+          <TableHead>
+            <TableRow>
+              <TableCell></TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell align="right">Creation Timestamp</TableCell>
+            </TableRow>
+          </TableHead>
           {children}
         </Table>
       </main>
