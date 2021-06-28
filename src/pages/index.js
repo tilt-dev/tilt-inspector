@@ -54,6 +54,41 @@ export default function Home(props) {
             <h3>Pod Log Streams &rarr;</h3>
             <p>Pod logs available for reading</p>
           </a>
+
+          <a href="/view/portforward" className="card">
+            <h3>Port Forwards &rarr;</h3>
+            <p>Local ports bound to a Kubernetes Pod</p>
+          </a>
+
+          <a href="/view/imagemap" className="card">
+            <h3>Image Map &rarr;</h3>
+            <p>Image references built by Tilt</p>
+          </a>
+
+          <a href="/view/kubernetesapply" className="card">
+            <h3>Kubernetes Apply &rarr;</h3>
+            <p>Kubernetes objects applied to the cluster</p>
+          </a>
+
+          <a href="/view/kubernetesdiscovery" className="card">
+            <h3>Kubernetes Discovery &rarr;</h3>
+            <p>Pods inferred from deployed Kubernetes objects</p>
+          </a>
+
+          <a href="/view/uisession" className="card">
+            <h3>UI Session &rarr;</h3>
+            <p>Global info for the Tilt web UI</p>
+          </a>
+
+          <a href="/view/uiresource" className="card">
+            <h3>UI Resource &rarr;</h3>
+            <p>Per-resource info for the Tilt web UI</p>
+          </a>
+
+          <a href="/view/uibutton" className="card">
+            <h3>UI Button &rarr;</h3>
+            <p>Custom buttons for the Tilt web UI</p>
+          </a>
         </div>
       </main>
     </div>
