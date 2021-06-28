@@ -1,6 +1,6 @@
 {
   "name": "@tilt.dev/tilt-inspector",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A small debugging server to help inspect Tilt state",
   "repository": "https://github.com/tilt-dev/tilt-inspector",
   "author": "Nick Santos <nick@tilt.dev>",
