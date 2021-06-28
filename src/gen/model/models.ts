@@ -35,26 +35,46 @@ export * from './v1alpha1FileWatch';
 export * from './v1alpha1FileWatchList';
 export * from './v1alpha1FileWatchSpec';
 export * from './v1alpha1FileWatchStatus';
+export * from './v1alpha1Forward';
+export * from './v1alpha1ForwardStatus';
 export * from './v1alpha1HTTPGetAction';
 export * from './v1alpha1HTTPHeader';
 export * from './v1alpha1IgnoreDef';
+export * from './v1alpha1ImageMap';
+export * from './v1alpha1ImageMapList';
+export * from './v1alpha1ImageMapOverrideArgs';
+export * from './v1alpha1ImageMapOverrideCommand';
+export * from './v1alpha1ImageMapSpec';
+export * from './v1alpha1ImageMapStatus';
+export * from './v1alpha1KubernetesApply';
+export * from './v1alpha1KubernetesApplyList';
+export * from './v1alpha1KubernetesApplySpec';
+export * from './v1alpha1KubernetesApplyStatus';
 export * from './v1alpha1KubernetesDiscovery';
 export * from './v1alpha1KubernetesDiscoveryList';
 export * from './v1alpha1KubernetesDiscoverySpec';
 export * from './v1alpha1KubernetesDiscoveryStatus';
+export * from './v1alpha1KubernetesImageLocator';
+export * from './v1alpha1KubernetesImageObjectDescriptor';
 export * from './v1alpha1KubernetesWatchRef';
+export * from './v1alpha1ObjectSelector';
 export * from './v1alpha1Pod';
 export * from './v1alpha1PodCondition';
 export * from './v1alpha1PodLogStream';
 export * from './v1alpha1PodLogStreamList';
 export * from './v1alpha1PodLogStreamSpec';
 export * from './v1alpha1PodLogStreamStatus';
+export * from './v1alpha1PortForward';
+export * from './v1alpha1PortForwardList';
+export * from './v1alpha1PortForwardSpec';
+export * from './v1alpha1PortForwardStatus';
 export * from './v1alpha1Probe';
 export * from './v1alpha1RestartOnSpec';
 export * from './v1alpha1Session';
 export * from './v1alpha1SessionList';
 export * from './v1alpha1SessionSpec';
 export * from './v1alpha1SessionStatus';
+export * from './v1alpha1StartOnSpec';
 export * from './v1alpha1TCPSocketAction';
 export * from './v1alpha1Target';
 export * from './v1alpha1TargetState';
@@ -64,6 +84,11 @@ export * from './v1alpha1TargetStateWaiting';
 export * from './v1alpha1TiltBuild';
 export * from './v1alpha1UIBuildRunning';
 export * from './v1alpha1UIBuildTerminated';
+export * from './v1alpha1UIButton';
+export * from './v1alpha1UIButtonList';
+export * from './v1alpha1UIButtonSpec';
+export * from './v1alpha1UIButtonStatus';
+export * from './v1alpha1UIComponentLocation';
 export * from './v1alpha1UIFeatureFlag';
 export * from './v1alpha1UIResource';
 export * from './v1alpha1UIResourceKubernetes';
@@ -78,7 +103,7 @@ export * from './v1alpha1UISessionStatus';
 export * from './v1alpha1VersionSettings';
 export * from './versionInfo';
 
-import localVarRequest = require('request');
+import localVarRequest from 'request';
 
 import { V1APIGroup } from './v1APIGroup';
 import { V1APIGroupList } from './v1APIGroupList';
@@ -117,26 +142,46 @@ import { V1alpha1FileWatch } from './v1alpha1FileWatch';
 import { V1alpha1FileWatchList } from './v1alpha1FileWatchList';
 import { V1alpha1FileWatchSpec } from './v1alpha1FileWatchSpec';
 import { V1alpha1FileWatchStatus } from './v1alpha1FileWatchStatus';
+import { V1alpha1Forward } from './v1alpha1Forward';
+import { V1alpha1ForwardStatus } from './v1alpha1ForwardStatus';
 import { V1alpha1HTTPGetAction } from './v1alpha1HTTPGetAction';
 import { V1alpha1HTTPHeader } from './v1alpha1HTTPHeader';
 import { V1alpha1IgnoreDef } from './v1alpha1IgnoreDef';
+import { V1alpha1ImageMap } from './v1alpha1ImageMap';
+import { V1alpha1ImageMapList } from './v1alpha1ImageMapList';
+import { V1alpha1ImageMapOverrideArgs } from './v1alpha1ImageMapOverrideArgs';
+import { V1alpha1ImageMapOverrideCommand } from './v1alpha1ImageMapOverrideCommand';
+import { V1alpha1ImageMapSpec } from './v1alpha1ImageMapSpec';
+import { V1alpha1ImageMapStatus } from './v1alpha1ImageMapStatus';
+import { V1alpha1KubernetesApply } from './v1alpha1KubernetesApply';
+import { V1alpha1KubernetesApplyList } from './v1alpha1KubernetesApplyList';
+import { V1alpha1KubernetesApplySpec } from './v1alpha1KubernetesApplySpec';
+import { V1alpha1KubernetesApplyStatus } from './v1alpha1KubernetesApplyStatus';
 import { V1alpha1KubernetesDiscovery } from './v1alpha1KubernetesDiscovery';
 import { V1alpha1KubernetesDiscoveryList } from './v1alpha1KubernetesDiscoveryList';
 import { V1alpha1KubernetesDiscoverySpec } from './v1alpha1KubernetesDiscoverySpec';
 import { V1alpha1KubernetesDiscoveryStatus } from './v1alpha1KubernetesDiscoveryStatus';
+import { V1alpha1KubernetesImageLocator } from './v1alpha1KubernetesImageLocator';
+import { V1alpha1KubernetesImageObjectDescriptor } from './v1alpha1KubernetesImageObjectDescriptor';
 import { V1alpha1KubernetesWatchRef } from './v1alpha1KubernetesWatchRef';
+import { V1alpha1ObjectSelector } from './v1alpha1ObjectSelector';
 import { V1alpha1Pod } from './v1alpha1Pod';
 import { V1alpha1PodCondition } from './v1alpha1PodCondition';
 import { V1alpha1PodLogStream } from './v1alpha1PodLogStream';
 import { V1alpha1PodLogStreamList } from './v1alpha1PodLogStreamList';
 import { V1alpha1PodLogStreamSpec } from './v1alpha1PodLogStreamSpec';
 import { V1alpha1PodLogStreamStatus } from './v1alpha1PodLogStreamStatus';
+import { V1alpha1PortForward } from './v1alpha1PortForward';
+import { V1alpha1PortForwardList } from './v1alpha1PortForwardList';
+import { V1alpha1PortForwardSpec } from './v1alpha1PortForwardSpec';
+import { V1alpha1PortForwardStatus } from './v1alpha1PortForwardStatus';
 import { V1alpha1Probe } from './v1alpha1Probe';
 import { V1alpha1RestartOnSpec } from './v1alpha1RestartOnSpec';
 import { V1alpha1Session } from './v1alpha1Session';
 import { V1alpha1SessionList } from './v1alpha1SessionList';
 import { V1alpha1SessionSpec } from './v1alpha1SessionSpec';
 import { V1alpha1SessionStatus } from './v1alpha1SessionStatus';
+import { V1alpha1StartOnSpec } from './v1alpha1StartOnSpec';
 import { V1alpha1TCPSocketAction } from './v1alpha1TCPSocketAction';
 import { V1alpha1Target } from './v1alpha1Target';
 import { V1alpha1TargetState } from './v1alpha1TargetState';
@@ -146,6 +191,11 @@ import { V1alpha1TargetStateWaiting } from './v1alpha1TargetStateWaiting';
 import { V1alpha1TiltBuild } from './v1alpha1TiltBuild';
 import { V1alpha1UIBuildRunning } from './v1alpha1UIBuildRunning';
 import { V1alpha1UIBuildTerminated } from './v1alpha1UIBuildTerminated';
+import { V1alpha1UIButton } from './v1alpha1UIButton';
+import { V1alpha1UIButtonList } from './v1alpha1UIButtonList';
+import { V1alpha1UIButtonSpec } from './v1alpha1UIButtonSpec';
+import { V1alpha1UIButtonStatus } from './v1alpha1UIButtonStatus';
+import { V1alpha1UIComponentLocation } from './v1alpha1UIComponentLocation';
 import { V1alpha1UIFeatureFlag } from './v1alpha1UIFeatureFlag';
 import { V1alpha1UIResource } from './v1alpha1UIResource';
 import { V1alpha1UIResourceKubernetes } from './v1alpha1UIResourceKubernetes';
@@ -213,26 +263,46 @@ let typeMap: {[index: string]: any} = {
     "V1alpha1FileWatchList": V1alpha1FileWatchList,
     "V1alpha1FileWatchSpec": V1alpha1FileWatchSpec,
     "V1alpha1FileWatchStatus": V1alpha1FileWatchStatus,
+    "V1alpha1Forward": V1alpha1Forward,
+    "V1alpha1ForwardStatus": V1alpha1ForwardStatus,
     "V1alpha1HTTPGetAction": V1alpha1HTTPGetAction,
     "V1alpha1HTTPHeader": V1alpha1HTTPHeader,
     "V1alpha1IgnoreDef": V1alpha1IgnoreDef,
+    "V1alpha1ImageMap": V1alpha1ImageMap,
+    "V1alpha1ImageMapList": V1alpha1ImageMapList,
+    "V1alpha1ImageMapOverrideArgs": V1alpha1ImageMapOverrideArgs,
+    "V1alpha1ImageMapOverrideCommand": V1alpha1ImageMapOverrideCommand,
+    "V1alpha1ImageMapSpec": V1alpha1ImageMapSpec,
+    "V1alpha1ImageMapStatus": V1alpha1ImageMapStatus,
+    "V1alpha1KubernetesApply": V1alpha1KubernetesApply,
+    "V1alpha1KubernetesApplyList": V1alpha1KubernetesApplyList,
+    "V1alpha1KubernetesApplySpec": V1alpha1KubernetesApplySpec,
+    "V1alpha1KubernetesApplyStatus": V1alpha1KubernetesApplyStatus,
     "V1alpha1KubernetesDiscovery": V1alpha1KubernetesDiscovery,
     "V1alpha1KubernetesDiscoveryList": V1alpha1KubernetesDiscoveryList,
     "V1alpha1KubernetesDiscoverySpec": V1alpha1KubernetesDiscoverySpec,
     "V1alpha1KubernetesDiscoveryStatus": V1alpha1KubernetesDiscoveryStatus,
+    "V1alpha1KubernetesImageLocator": V1alpha1KubernetesImageLocator,
+    "V1alpha1KubernetesImageObjectDescriptor": V1alpha1KubernetesImageObjectDescriptor,
     "V1alpha1KubernetesWatchRef": V1alpha1KubernetesWatchRef,
+    "V1alpha1ObjectSelector": V1alpha1ObjectSelector,
     "V1alpha1Pod": V1alpha1Pod,
     "V1alpha1PodCondition": V1alpha1PodCondition,
     "V1alpha1PodLogStream": V1alpha1PodLogStream,
     "V1alpha1PodLogStreamList": V1alpha1PodLogStreamList,
     "V1alpha1PodLogStreamSpec": V1alpha1PodLogStreamSpec,
     "V1alpha1PodLogStreamStatus": V1alpha1PodLogStreamStatus,
+    "V1alpha1PortForward": V1alpha1PortForward,
+    "V1alpha1PortForwardList": V1alpha1PortForwardList,
+    "V1alpha1PortForwardSpec": V1alpha1PortForwardSpec,
+    "V1alpha1PortForwardStatus": V1alpha1PortForwardStatus,
     "V1alpha1Probe": V1alpha1Probe,
     "V1alpha1RestartOnSpec": V1alpha1RestartOnSpec,
     "V1alpha1Session": V1alpha1Session,
     "V1alpha1SessionList": V1alpha1SessionList,
     "V1alpha1SessionSpec": V1alpha1SessionSpec,
     "V1alpha1SessionStatus": V1alpha1SessionStatus,
+    "V1alpha1StartOnSpec": V1alpha1StartOnSpec,
     "V1alpha1TCPSocketAction": V1alpha1TCPSocketAction,
     "V1alpha1Target": V1alpha1Target,
     "V1alpha1TargetState": V1alpha1TargetState,
@@ -242,6 +312,11 @@ let typeMap: {[index: string]: any} = {
     "V1alpha1TiltBuild": V1alpha1TiltBuild,
     "V1alpha1UIBuildRunning": V1alpha1UIBuildRunning,
     "V1alpha1UIBuildTerminated": V1alpha1UIBuildTerminated,
+    "V1alpha1UIButton": V1alpha1UIButton,
+    "V1alpha1UIButtonList": V1alpha1UIButtonList,
+    "V1alpha1UIButtonSpec": V1alpha1UIButtonSpec,
+    "V1alpha1UIButtonStatus": V1alpha1UIButtonStatus,
+    "V1alpha1UIComponentLocation": V1alpha1UIComponentLocation,
     "V1alpha1UIFeatureFlag": V1alpha1UIFeatureFlag,
     "V1alpha1UIResource": V1alpha1UIResource,
     "V1alpha1UIResourceKubernetes": V1alpha1UIResourceKubernetes,
